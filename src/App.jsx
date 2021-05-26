@@ -1,26 +1,45 @@
 import React, { Component } from 'react'
+import { GameBoard } from './components/GameBoard'
 
 export class App extends Component {
   state = {
     id: 1,
     board: [
-      ['X', ' ', ' ', 'X', ' ', ' ', ' ', ' '],
-      [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-      [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-      [' ', ' ', ' ', ' X', ' ', ' ', ' ', ' '],
+      ['', ' ', ' ', '', ' ', ' ', ' ', ' '],
       [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
       [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
       [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-      [' ', ' ', ' ', ' ', ' ', ' ', ' ', 'X'],
+      [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+      [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+      [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+      [' ', ' ', ' ', ' ', ' ', ' ', ' ', ''],
     ],
     state: 'new',
     mines: 10,
   }
 
-  handleCellClick = async (row, column) => {
+  recordCheck = async (row, column) => {
     const body = { row: row, col: column }
     const response = await fetch(
       `https://minesweeper-api.herokuapp.com/games/${this.state.id}/check`,
+      {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(body),
+      }
+    )
+    if (response.status === 200) {
+      // Get the response as JSON
+      const game = await response.json()
+      // Make that the new state!
+      this.setState(game)
+    }
+  }
+
+  recordFlag = async (row, column) => {
+    const body = { row: row, col: column }
+    const response = await fetch(
+      `https://minesweeper-api.herokuapp.com/games/${this.state.id}/flag`,
       {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
@@ -52,6 +71,9 @@ export class App extends Component {
       this.setState(game)
     }
   }
+  componentDidMount() {
+    this.handleNewGame()
+  }
 
   render() {
     return (
@@ -60,7 +82,7 @@ export class App extends Component {
           <h3>Sweeping for Mines!</h3>
           <ul>
             <li>
-              <article>Count: Test</article>
+              <article>Count: {this.state.mines} </article>
             </li>
             <li>
               <button
@@ -71,25 +93,11 @@ export class App extends Component {
               </button>
             </li>
           </ul>
-          <div className="boardUI">
-            {' '}
-            {this.state.board.map((row, rowIdx) => {
-              return (
-                <div className="row">
-                  {row.map((cell, columnIdx) => {
-                    return (
-                      <button
-                        className="cell"
-                        onClick={() => this.handleCellClick(rowIdx, columnIdx)}
-                      >
-                        {cell}
-                      </button>
-                    )
-                  })}
-                </div>
-              )
-            })}
-          </div>
+          <GameBoard
+            board={this.state.board}
+            recordCheck={this.recordCheck}
+            recordFlag={this.recordFlag}
+          />
         </main>
       </>
     )
