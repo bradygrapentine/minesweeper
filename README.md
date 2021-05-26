@@ -2,6 +2,8 @@
 
 ![SDG](./docs/button.png)
 
+\*\* Fix the margin between the main and the board in CSS so that it only adjusts when more squares are added
+
 In this assignment, you will communicate with a back-end API server to create the user-interface for a Minesweeper clone. It might help to familiarize yourself with the game if you have never played it.
 
 Objectives
