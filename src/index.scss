@@ -58,21 +58,22 @@ ul {
   border-right-color: white;
   border-bottom-color: white;
   background-color: rgb(201, 201, 201);
-  padding: 0.5rem;
+  padding: 0.375rem;
 }
 button {
   align-self: center;
-  width: 5rem;
-  height: 2rem;
+  width: 3rem;
+  height: 5.75rem;
   border: 3.5px solid;
-  padding: 0.125rem;
+  padding: 0rem 0rem 0.125rem 0rem;
   border-right-color: rgb(133, 133, 133);
   border-bottom-color: rgb(133, 133, 133);
   border-left-color: white;
   border-top-color: white;
   background-color: rgb(201, 201, 201);
-  text-align: center;
-  line-height: 1rem;
+  // text-align: center;
+  font-size: 0.45rem;
+  // line-height: 1rem;
 }
 
 .boardUI {

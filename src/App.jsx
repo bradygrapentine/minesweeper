@@ -8,7 +8,7 @@ export class Count extends Component {
     } else if (this.props.state == 'lost') {
       return <article>You lost!</article>
     } else {
-      return <article>Count: {this.props.mines} </article>
+      return <article>Hidden Mines: {this.props.mines} </article>
     }
   }
 }
@@ -101,7 +101,7 @@ export class App extends Component {
                 className="playAgain"
                 onClick={() => this.handleNewGame()}
               >
-                Play Again
+                <strong>Play Again</strong>
               </button>
             </li>
           </ul>
