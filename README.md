@@ -2,11 +2,13 @@
 
 ![SDG](./docs/button.png)
 
-\*\* Fix the margin between the main and the board in CSS so that it only adjusts when more squares are added
+<!-- \*\* Fix the margin between the main and the board in CSS so that it only adjusts when more squares are added -->
+
+<!-------------------------------------------------------------------------------------->
 
 In this assignment, you will communicate with a back-end API server to create the user-interface for a Minesweeper clone. It might help to familiarize yourself with the game if you have never played it.
 
-Objectives
+<!-- Objectives -->
 
 - Understand how state drives changes to an interface in React
 - Respond to user events in React
@@ -15,7 +17,7 @@ Objectives
 - Understand and interpret API documentation
 - Use fetch or axios to perform POST request or
 
-Requirements:
+<!-- Requirements: -->
 
 - Read over the documentation for the API we will be using: https://minesweeper-api.herokuapp.com/
 
@@ -25,26 +27,40 @@ Requirements:
 
 - Use Insomnia to test out the API. Try "playing" games with the API. This will help you understand the "flow" of the game via the API.
 
-Explorer Mode:
+<!-------------------------------------------------------------------------------------->
+
+<!-- Explorer Mode: -->
+
+<!-- DONE -->
 
 - Create a button to create a new game. Use the animated gif above as a user interface guide. Do at least that much, but also feel free to have fun.
 
-- Style the cells appropriately.
+<!-- DONE -->
 
 - Left-clicking a cell performs the check action
 
+<!-- DONE -->
+
 - Right/secondary clicking a cell performs the flag action
 
-- When the game status changed to won or lost a victory or failure message - Do not use alert for this. Update the user interface.
+<!-- DONE -->
 
-Adventure Mode:
+When the game status changed to won or lost a victory or failure message - Do not use alert for this. Update the user interface.
 
-- Before creating the game, allow the user to choose: Easy, Medium, or Hard mode.
+--------------------------------------Style the cells appropriately.
 
-- Have fun with the styling. Make it your own.
+<!-------------------------------------------------------------------------------------->
 
-Epic Mode:
+<!-- Adventure Mode: -->
 
-- Learn how to use localStorage API to store data in the browser. Use this to allow the user to close the browser window and come back to a game already in progress.
+--------------------------------------Before creating the game, allow the user to choose: - Easy, Medium, or Hard mode.
 
-- Add sound effects.
+--------------------------------------Have fun with the styling. Make it your own.
+
+<!-------------------------------------------------------------------------------------->
+
+<!-- Epic Mode: -->
+
+--------------------------------------Learn how to use localStorage API to store data in - the browser. Use this to allow the user to close - the browser window and come back to a game already - in progress.
+
+--------------------------------------Add sound effects.
