@@ -1,6 +1,18 @@
 import React, { Component } from 'react'
 import { GameBoard } from './components/GameBoard'
 
+export class Count extends Component {
+  render() {
+    if (this.props.state == 'won') {
+      return <article>You won!</article>
+    } else if (this.props.state == 'lost') {
+      return <article>You lost!</article>
+    } else {
+      return <article>Count: {this.props.mines} </article>
+    }
+  }
+}
+
 export class App extends Component {
   state = {
     id: 1,
@@ -82,7 +94,7 @@ export class App extends Component {
           <h3>Sweeping for Mines!</h3>
           <ul>
             <li>
-              <article>Count: {this.state.mines} </article>
+              <Count state={this.state.state} mines={this.state.mines} />
             </li>
             <li>
               <button
