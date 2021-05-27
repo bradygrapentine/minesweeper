@@ -13,18 +13,26 @@ export class GameBoard extends Component {
         {' '}
         {this.props.board.map((row, rowIdx) => {
           return (
-            <div onContextMenu={e => e.preventDefault()} className="row">
+            <div className="row">
               {row.map((cell, columnIdx) => {
                 return (
-                  <button
-                    className="cell"
-                    onClick={() => this.handleCellLeftClick(rowIdx, columnIdx)}
-                    onContextMenu={() =>
-                      this.handleCellRightClick(rowIdx, columnIdx)
-                    }
+                  <article
+                    className="onSelect"
+                    onContextMenu={event => event.preventDefault()}
                   >
-                    {cell}
-                  </button>
+                    {' '}
+                    <button
+                      className="cell"
+                      onClick={() =>
+                        this.handleCellLeftClick(rowIdx, columnIdx)
+                      }
+                      onContextMenu={() =>
+                        this.handleCellRightClick(rowIdx, columnIdx)
+                      }
+                    >
+                      {cell}
+                    </button>
+                  </article>
                 )
               })}
             </div>

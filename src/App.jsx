@@ -4,11 +4,15 @@ import { GameBoard } from './components/GameBoard'
 export class Count extends Component {
   render() {
     if (this.props.state == 'won') {
-      return <article>You won!</article>
+      return <article className="noSelect">You won!</article>
     } else if (this.props.state == 'lost') {
-      return <article>You lost!</article>
+      return <article className="noSelect">You lost!</article>
     } else {
-      return <article>Hidden Mines: {this.props.mines} </article>
+      return (
+        <article className="noSelect">
+          Hidden Mines: {this.props.mines}{' '}
+        </article>
+      )
     }
   }
 }
@@ -91,21 +95,26 @@ export class App extends Component {
     return (
       <>
         <main>
-          <h3>Sweeping for Mines!</h3>
+          <h3 className="noSelect">Sweeping for Mines!</h3>
           <ul>
             <li>
-              <Count state={this.state.state} mines={this.state.mines} />
+              <Count
+                className="noSelect"
+                state={this.state.state}
+                mines={this.state.mines}
+              />
             </li>
             <li>
               <button
-                className="playAgain"
+                className="playAgain noSelect"
                 onClick={() => this.handleNewGame()}
               >
-                <strong>Play Again</strong>
+                <strong className="noSelect">Play Again</strong>
               </button>
             </li>
           </ul>
           <GameBoard
+            className="noSelect"
             board={this.state.board}
             recordCheck={this.recordCheck}
             recordFlag={this.recordFlag}
