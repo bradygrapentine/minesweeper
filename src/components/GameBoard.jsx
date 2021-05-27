@@ -13,7 +13,7 @@ export class GameBoard extends Component {
         {' '}
         {this.props.board.map((row, rowIdx) => {
           return (
-            <div className="row">
+            <div key={rowIdx} className="row">
               {row.map((cell, columnIdx) => {
                 return (
                   <article
@@ -22,6 +22,7 @@ export class GameBoard extends Component {
                   >
                     {' '}
                     <button
+                      key={columnIdx} // unique (in its domain) because the only element in the row with that particular columnIdx
                       className="cell"
                       onClick={() =>
                         this.handleCellLeftClick(rowIdx, columnIdx)
@@ -29,6 +30,7 @@ export class GameBoard extends Component {
                       onContextMenu={() =>
                         this.handleCellRightClick(rowIdx, columnIdx)
                       }
+                      // onContextMenu={event => event.preventDefault()}
                     >
                       {cell}
                     </button>
