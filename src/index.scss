@@ -34,6 +34,8 @@ h3 {
   border-bottom-color: white;
   background-color: rgb(201, 201, 201);
   padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
 }
 li {
   list-style: none;
@@ -60,20 +62,17 @@ ul {
   background-color: rgb(201, 201, 201);
   padding: 0.375rem;
 }
-button {
+
+.playAgain {
   align-self: center;
-  width: 3rem;
-  height: 5.75rem;
   border: 3.5px solid;
-  padding: 0rem 0rem 0.125rem 0rem;
+  padding: 0.125rem 0.5rem;
   border-right-color: rgb(133, 133, 133);
   border-bottom-color: rgb(133, 133, 133);
   border-left-color: white;
   border-top-color: white;
   background-color: rgb(201, 201, 201);
-  // text-align: center;
   font-size: 0.45rem;
-  // line-height: 1rem;
 }
 
 .boardUI {
@@ -117,17 +116,28 @@ article {
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  width: auto;
+  height: auto;
+  border: 3.5px solid;
+  padding: 0.125rem 0.5rem;
+  margin: 0rem 0rem 0.75rem 0rem;
+  border-right-color: rgb(133, 133, 133);
+  border-bottom-color: rgb(133, 133, 133);
+  border-left-color: white;
+  border-top-color: white;
+  background-color: rgb(201, 201, 201);
+  // text-align: center;
+  font-size: 0.45rem;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
+  margin: 5.35px 0px;
+  background-color: rgb(201, 201, 201);
+  min-width: 3rem;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  padding: 5px;
   z-index: 1;
 }
 

@@ -27,11 +27,9 @@ In this assignment, you will communicate with a back-end API server to create th
 
 - Use Insomnia to test out the API. Try "playing" games with the API. This will help you understand the "flow" of the game via the API.
 
-<!-------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
 
 <!-- Explorer Mode: -->
-
-<!-- DONE -->
 
 - Create a button to create a new game. Use the animated gif above as a user interface guide. Do at least that much, but also feel free to have fun.
 
@@ -47,17 +45,21 @@ In this assignment, you will communicate with a back-end API server to create th
 
 When the game status changed to won or lost a victory or failure message - Do not use alert for this. Update the user interface.
 
+<!-- DONE -->
+
 --------------------------------------Style the cells appropriately.
 
-<!-------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
 
 <!-- Adventure Mode: -->
 
---------------------------------------Before creating the game, allow the user to choose: - Easy, Medium, or Hard mode.
+Before creating the game, allow the user to choose: - Easy, Medium, or Hard mode.
+
+<!-- DONE -->
 
 --------------------------------------Have fun with the styling. Make it your own.
 
-<!-------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
 
 <!-- Epic Mode: -->
 

@@ -49,6 +49,7 @@ export class App extends Component {
       const game = await response.json()
       // Make that the new state!
       this.setState(game)
+      localStorage.setItem('GameBoard', game)
     }
   }
 
@@ -67,6 +68,7 @@ export class App extends Component {
       const game = await response.json()
       // Make that the new state!
       this.setState(game)
+      localStorage.setItem('GameBoard', game)
     }
   }
 
@@ -105,6 +107,7 @@ export class App extends Component {
       console.log(game)
       // Make that the new state!
       this.setState(game)
+      localStorage.setItem('GameBoard', game)
     }
   }
 
@@ -125,6 +128,7 @@ export class App extends Component {
       console.log(game)
       // Make that the new state!
       this.setState(game)
+      localStorage.setItem('GameBoard', game)
     }
   }
 
@@ -145,6 +149,7 @@ export class App extends Component {
       console.log(game)
       // Make that the new state!
       this.setState(game)
+      localStorage.setItem('GameBoard', game)
     }
   }
 
@@ -155,17 +160,18 @@ export class App extends Component {
   render() {
     return (
       <>
-        <div className="dropdown">
-          <span>Select Difficulty</span>
-          <div className="dropdown-content">
-            <p onClick={() => this.setToEasy()}>Easy</p>
-            <p onClick={() => this.setToMedium()}>Medium</p>
-            <p onClick={() => this.setToHard()}>Hard</p>
-          </div>
-        </div>
         <main>
           <h3 className="noSelect">Sweeping for Mines!</h3>
-
+          <button className="dropdown">
+            <span>
+              <strong>Select Difficulty</strong>
+            </span>
+            <div className="dropdown-content">
+              <p onClick={() => this.setToEasy()}>Easy</p>
+              <p onClick={() => this.setToMedium()}>Medium</p>
+              <p onClick={() => this.setToHard()}>Hard</p>
+            </div>
+          </button>
           <ul>
             <li>
               <Count
