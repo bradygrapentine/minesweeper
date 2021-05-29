@@ -87,6 +87,67 @@ export class App extends Component {
       this.setState(game)
     }
   }
+
+  setToEasy = async () => {
+    // Make a POST request to ask for a new game
+    const body = { difficulty: 0 }
+    const response = await fetch(
+      'https://minesweeper-api.herokuapp.com/games',
+      {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(body),
+      }
+    )
+    if (response.status === 200) {
+      // Get the response as JSON
+      const game = await response.json()
+      console.log(game)
+      // Make that the new state!
+      this.setState(game)
+    }
+  }
+
+  setToMedium = async () => {
+    // Make a POST request to ask for a new game
+    const body = { difficulty: 1 }
+    const response = await fetch(
+      'https://minesweeper-api.herokuapp.com/games',
+      {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(body),
+      }
+    )
+    if (response.status === 200) {
+      // Get the response as JSON
+      const game = await response.json()
+      console.log(game)
+      // Make that the new state!
+      this.setState(game)
+    }
+  }
+
+  setToHard = async () => {
+    // Make a POST request to ask for a new game
+    const body = { difficulty: 2 }
+    const response = await fetch(
+      'https://minesweeper-api.herokuapp.com/games',
+      {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(body),
+      }
+    )
+    if (response.status === 200) {
+      // Get the response as JSON
+      const game = await response.json()
+      console.log(game)
+      // Make that the new state!
+      this.setState(game)
+    }
+  }
+
   componentDidMount() {
     this.handleNewGame()
   }
@@ -94,8 +155,17 @@ export class App extends Component {
   render() {
     return (
       <>
+        <div className="dropdown">
+          <span>Select Difficulty</span>
+          <div className="dropdown-content">
+            <p onClick={() => this.setToEasy()}>Easy</p>
+            <p onClick={() => this.setToMedium()}>Medium</p>
+            <p onClick={() => this.setToHard()}>Hard</p>
+          </div>
+        </div>
         <main>
           <h3 className="noSelect">Sweeping for Mines!</h3>
+
           <ul>
             <li>
               <Count
