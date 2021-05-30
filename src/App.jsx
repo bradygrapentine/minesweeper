@@ -34,14 +34,19 @@ export class App extends Component {
     mines: 10,
   }
 
-  recordCheck = async (row, column) => {
-    const body = { row: row, col: column }
+  recordCheck = async (row, column, cell) => {
+    // const body = { row: row, col: column }
+    if (cell == 'F') {
+      window.alert('Must remove flag before checking for mine')
+      return
+    }
     const response = await fetch(
-      `https://minesweeper-api.herokuapp.com/games/${this.state.id}/check`,
+      `https://minesweeper-api.herokuapp.com/games/${this.state.id}/check?row=${row}&col=${column}`,
+      // `https://minesweeper-api.herokuapp.com/games/${this.state.id}/check`,
       {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(body),
+        // headers: { 'content-type': 'application/json' },
+        // body: JSON.stringify(body),
       }
     )
     if (response.status === 200) {
@@ -53,13 +58,13 @@ export class App extends Component {
   }
 
   recordFlag = async (row, column) => {
-    const body = { row: row, col: column }
+    // const body = { row: row, col: column }
     const response = await fetch(
-      `https://minesweeper-api.herokuapp.com/games/${this.state.id}/flag`,
+      `https://minesweeper-api.herokuapp.com/games/${this.state.id}/flag?row=${row}&col=${column}`,
       {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(body),
+        // headers: { 'content-type': 'application/json' },
+        // body: JSON.stringify(body),
       }
     )
     if (response.status === 200) {

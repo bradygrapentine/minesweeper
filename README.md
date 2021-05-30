@@ -47,9 +47,9 @@ When the game status changed to won or lost a victory or failure message - Do no
 
 <!-- DONE -->
 
---------------------------------------Style the cells appropriately.
+- Style the cells appropriately.
 
-~ superimpose emojis and alter display after buttons are clicked in accordance with the model on Nexus
+<!-- DONE -->
 
 <!---------------------------------------------------------------------->
 

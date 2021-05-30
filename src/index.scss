@@ -92,6 +92,8 @@ article {
   padding: 0;
   margin: 0;
   font-size: 0.85rem;
+  width: fit-content;
+  height: fit-content;
 }
 .cell {
   width: 1.75rem;
@@ -105,7 +107,7 @@ article {
   border-top-color: white;
   background-color: rgb(201, 201, 201);
   text-align: center;
-  line-height: 1rem;
+  // line-height: 1rem;
 }
 
 .noSelect {
@@ -147,4 +149,51 @@ article {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.flag {
+  font-size: 0%;
+}
+
+.flag::before {
+  content: '🚩';
+  font-size: 0.85rem;
+}
+
+.bomb {
+  font-size: 0%;
+  border: 0.5px solid;
+  border-color: rgb(133, 133, 133);
+  padding: 0.1rem;
+}
+
+.bomb::before {
+  content: '💣';
+  font-size: 0.85rem;
+}
+
+.empty {
+  font-size: 0%;
+  border: 0.5px solid;
+  border-color: rgb(133, 133, 133);
+  padding: 0.1rem;
+}
+
+.number {
+  border: 0.5px solid;
+  border-color: rgb(133, 133, 133);
+  padding: 0.1rem;
+}
+
+.loss {
+  background-color: rgba(255, 0, 0, 0.6);
+  font-size: 0%;
+  border: 0.5px solid;
+  border-color: rgb(133, 133, 133);
+  padding: 0.1rem;
+}
+
+.loss::before {
+  content: '💣';
+  font-size: 0.85rem;
 }
