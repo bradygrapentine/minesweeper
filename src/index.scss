@@ -9,14 +9,16 @@ html {
 body {
   padding: 2.75rem;
   min-height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 main {
   display: flex;
-  width: auto;
+  width: fit-content;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
   border: 7px solid;
   border-right-color: rgb(133, 133, 133, 0.7);
   border-bottom-color: rgb(133, 133, 133, 0.7);
@@ -89,6 +91,7 @@ ul {
 article {
   padding: 0;
   margin: 0;
+  font-size: 0.85rem;
 }
 .cell {
   width: 1.75rem;
@@ -133,9 +136,10 @@ article {
 .dropdown-content {
   display: none;
   position: absolute;
-  margin: 5.35px 0px;
+  // right: 45.5%;
+  margin: 5.45px 0px 0px 3.5px;
   background-color: rgb(201, 201, 201);
-  min-width: 3rem;
+  min-width: 2.5rem;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
   padding: 5px;
   z-index: 1;

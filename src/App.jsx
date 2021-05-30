@@ -10,7 +10,7 @@ export class Count extends Component {
     } else {
       return (
         <article className="noSelect">
-          Hidden Mines: {this.props.mines}{' '}
+          <strong>Hidden Mines: {this.props.mines}</strong>
         </article>
       )
     }
@@ -49,7 +49,6 @@ export class App extends Component {
       const game = await response.json()
       // Make that the new state!
       this.setState(game)
-      localStorage.setItem('GameBoard', game)
     }
   }
 
@@ -68,7 +67,6 @@ export class App extends Component {
       const game = await response.json()
       // Make that the new state!
       this.setState(game)
-      localStorage.setItem('GameBoard', game)
     }
   }
 
@@ -107,7 +105,6 @@ export class App extends Component {
       console.log(game)
       // Make that the new state!
       this.setState(game)
-      localStorage.setItem('GameBoard', game)
     }
   }
 
@@ -128,7 +125,6 @@ export class App extends Component {
       console.log(game)
       // Make that the new state!
       this.setState(game)
-      localStorage.setItem('GameBoard', game)
     }
   }
 
@@ -149,7 +145,6 @@ export class App extends Component {
       console.log(game)
       // Make that the new state!
       this.setState(game)
-      localStorage.setItem('GameBoard', game)
     }
   }
 

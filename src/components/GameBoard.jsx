@@ -7,6 +7,14 @@ export class GameBoard extends Component {
   handleCellRightClick = (row, column) => {
     this.props.recordFlag(row, column)
   }
+  // handleCell = cell => {
+  //   if (cell === 'F') {
+  //     cell = '🚩'
+  //   } else if (cell === '*') {
+  //     cell = '💥'
+  //   }
+  // }
+
   render() {
     return (
       <div className="boardUI">
