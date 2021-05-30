@@ -49,6 +49,8 @@ When the game status changed to won or lost a victory or failure message - Do no
 
 --------------------------------------Style the cells appropriately.
 
+~ superimpose emojis and alter display after buttons are clicked in accordance with the model on Nexus
+
 <!---------------------------------------------------------------------->
 
 <!-- Adventure Mode: -->
@@ -59,10 +61,16 @@ Before creating the game, allow the user to choose: - Easy, Medium, or Hard mode
 
 --------------------------------------Have fun with the styling. Make it your own.
 
+~ add a background image and some color
+
 <!---------------------------------------------------------------------->
 
 <!-- Epic Mode: -->
 
 --------------------------------------Learn how to use localStorage API to store data in - the browser. Use this to allow the user to close - the browser window and come back to a game already - in progress.
 
+~ deep dive into the documentation for this
+
 --------------------------------------Add sound effects.
+
+~ low priority
