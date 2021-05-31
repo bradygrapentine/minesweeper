@@ -161,9 +161,9 @@ export class App extends Component {
     return (
       <>
         <main>
-          <h3 className="noSelect">
+          <h1 className="noSelect">
             <strong>Sweeping for Mines!</strong>
-          </h3>
+          </h1>
           <button className="dropdown">
             <span>
               <strong>Select Difficulty</strong>
