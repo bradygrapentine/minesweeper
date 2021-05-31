@@ -54,6 +54,7 @@ export class App extends Component {
       const game = await response.json()
       // Make that the new state!
       this.setState(game)
+      // localStorage.setItem('game', JSON.stringify(this.state))
     }
   }
 
@@ -72,6 +73,7 @@ export class App extends Component {
       const game = await response.json()
       // Make that the new state!
       this.setState(game)
+      // localStorage.setItem('game', JSON.stringify(this.state))
     }
   }
 
@@ -154,7 +156,16 @@ export class App extends Component {
   }
 
   componentDidMount() {
+    // const game = localStorage.getItem('game')
+    // if (!game) {
     this.handleNewGame()
+    // } else {
+    //   try {
+    //     this.setState(game)
+    //   } catch {
+    //     this.handleNewGame()
+    //   }
+    // }
   }
 
   render() {
