@@ -59,7 +59,7 @@ Before creating the game, allow the user to choose: - Easy, Medium, or Hard mode
 
 <!-- DONE -->
 
---------------------------------------Have fun with the styling. Make it your own.
+Have fun with the styling. Make it your own.
 
 <!-- DONE -->
 
