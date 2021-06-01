@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { GameBoard } from './components/GameBoard'
+import ls from 'local-storage'
 
 export class Count extends Component {
   render() {
@@ -54,7 +55,7 @@ export class App extends Component {
       const game = await response.json()
       // Make that the new state!
       this.setState(game)
-      // localStorage.setItem('game', JSON.stringify(this.state))
+      window.localStorage.setItem('game', JSON.stringify(this.state))
     }
   }
 
@@ -73,7 +74,7 @@ export class App extends Component {
       const game = await response.json()
       // Make that the new state!
       this.setState(game)
-      // localStorage.setItem('game', JSON.stringify(this.state))
+      window.localStorage.setItem('game', JSON.stringify(this.state))
     }
   }
 
@@ -92,6 +93,7 @@ export class App extends Component {
       console.log(game)
       // Make that the new state!
       this.setState(game)
+      window.localStorage.setItem('game', JSON.stringify(this.state))
     }
   }
 
@@ -112,6 +114,7 @@ export class App extends Component {
       console.log(game)
       // Make that the new state!
       this.setState(game)
+      window.localStorage.setItem('game', JSON.stringify(this.state))
     }
   }
 
@@ -132,6 +135,7 @@ export class App extends Component {
       console.log(game)
       // Make that the new state!
       this.setState(game)
+      window.localStorage.setItem('game', JSON.stringify(this.state))
     }
   }
 
@@ -152,20 +156,21 @@ export class App extends Component {
       console.log(game)
       // Make that the new state!
       this.setState(game)
+      window.localStorage.setItem('game', JSON.stringify(this.state))
     }
   }
 
   componentDidMount() {
-    // const game = localStorage.getItem('game')
-    // if (!game) {
-    this.handleNewGame()
-    // } else {
-    //   try {
-    //     this.setState(game)
-    //   } catch {
-    //     this.handleNewGame()
-    //   }
-    // }
+    const game = window.localStorage.getItem('game')
+    if (game == null) {
+      this.handleNewGame()
+    } else {
+      try {
+        this.setState(JSON.parse(game))
+      } catch {
+        this.handleNewGame()
+      }
+    }
   }
 
   render() {

@@ -1,5 +1,5 @@
 :root {
-  font: 16px / 1 sans-serif;
+  font: 15px / 1 serif;
 }
 
 html {
@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: pink;
+  color: rgb(0, 104, 5);
   background-size: cover;
   background-image: url('//images.unsplash.com/photo-1551109543-e37833b2e37f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
   background-attachment: fixed;
@@ -25,10 +26,10 @@ main {
   align-items: center;
   padding: 2rem;
   border: 7px solid;
-  border-right-color: rgb(133, 133, 133, 0.5);
-  border-bottom-color: rgb(133, 133, 133, 0.5);
-  border-left-color: rgb(250, 250, 250, 0.5);
-  border-top-color: rgb(250, 250, 250, 0.5);
+  border-right-color: rgb(133, 133, 133, 0.6);
+  border-bottom-color: rgb(133, 133, 133, 0.6);
+  border-left-color: rgb(250, 250, 250, 0.6);
+  border-top-color: rgb(250, 250, 250, 0.6);
   background-color: rgb(201, 201, 201, 0.5);
 }
 
@@ -80,6 +81,7 @@ ul {
   border-top-color: white;
   background-color: rgb(201, 201, 201);
   font-size: 1rem;
+  color: rgb(0, 104, 5);
 }
 
 .boardUI {
@@ -129,6 +131,7 @@ article {
 
 .dropdown {
   // width: 10rem;
+  color: rgb(0, 104, 5);
   height: auto;
   border: 3.5px solid;
   padding: 0.125rem 0.5rem;
