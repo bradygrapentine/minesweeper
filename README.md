@@ -1,6 +1,6 @@
 # Minesweeper
 
-## https://react-calculator-bgrap.netlify.app/
+## https://minesweeper-bgrap.netlify.app
 
 ![](./src/images/CaptureReactCalc.PNG)
 
