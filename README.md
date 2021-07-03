@@ -2,11 +2,9 @@
 
 ![](./src/images/CaptureMineSweeper.PNG)
 
-This is a minesweeper clone that I built during my time at Suncoast Developers Guild. I had a lot of fun exploring the interplay between JS and CSS during this assignment.
+This is a recreation of minesweeper that I built using React during my time at Suncoast Developers Guild.
 
 Try it out! If you can't beat it, you can close the tab and come back later. My clone will start you right where you left off because I've got a little local storage built into this application.
-
-Let me know if you can win on Hard mode. It's a challenge.
 
  <!-- Fix the margin between the main and the board in CSS so that it only adjusts when more squares are added -->
 
