@@ -2,7 +2,7 @@
 
 ![](./src/images/CaptureMineSweeper.PNG)
 
-This is a recreation of minesweeper that I built using React during my time at Suncoast Developers Guild.
+This is a recreation of minesweeper that I built using JavaScript and React during my time at Suncoast Developers Guild.
 
 Try it out! If you can't beat it, you can close the tab and come back later. My application will start you right where you left off when you come back. You can thank your local storage for that.
 
