@@ -1,4 +1,4 @@
-# Minesweeper
+# [Minesweeper](https://minesweeper-bgrap.netlify.app)
 
 ## https://minesweeper-bgrap.netlify.app
 
