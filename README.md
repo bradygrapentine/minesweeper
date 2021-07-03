@@ -4,7 +4,7 @@
 
 This is a recreation of minesweeper that I built using React during my time at Suncoast Developers Guild.
 
-Try it out! If you can't beat it, you can close the tab and come back later. My clone will start you right where you left off because I've got a little local storage built into this application.
+Try it out! If you can't beat it, you can close the tab and come back later. My application will start you right where you left off when you come back. You can thank your local storage for that.
 
  <!-- Fix the margin between the main and the board in CSS so that it only adjusts when more squares are added -->
 
