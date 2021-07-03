@@ -4,9 +4,11 @@
 
 ![](./src/images/CaptureMineSweeper.PNG)
 
-This is a hooks-based calculator that I made for an assignment at Suncoast Developers Guild. It was a lot of fun to work with and figure out how to manipulate all the different state variables while building this.
+This is a minesweeper clone that I built during my time at Suncoast Developers Guild. I had a lot of fun exploring the interplay between JS and CSS during this assignment.
 
-I was able to emulate the iteration features in a standard apple calculator, so give it a try and compare it to your iPhone's calculator (if you have one).
+Try it out! If you can't beat it, you can close the tab and come back later. My clone will start you right where you left off because I've got a little local storage built into this application.
+
+Let me know if you can win on Hard mode. It's a challenge.
 
  <!-- Fix the margin between the main and the board in CSS so that it only adjusts when more squares are added -->
 
