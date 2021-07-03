@@ -2,7 +2,7 @@
 
 ## https://minesweeper-bgrap.netlify.app
 
-![](./src/images/CaptureReactCalc.PNG)
+![](./src/images/CaptureMineSweeper.PNG)
 
 This is a hooks-based calculator that I made for an assignment at Suncoast Developers Guild. It was a lot of fun to work with and figure out how to manipulate all the different state variables while building this.
 
